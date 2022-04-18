@@ -4,12 +4,12 @@
 The _printf function is a custom implementation of the C programming function printf. It returns the number of characters printed and writes the output to stdout. It includes the conversion specifiers : c, s, %, d, x, X, u, o, rot13 and i.
 
  Example
-#include "holberton.h"
+#include "main.h"
 _printf("The %s jumped %d times! -%c", "dog", 7, 'C');
 output : The dog jumped 7 times! -C
 
 ## Project Requirements
-All files will be compiled on Ubuntu 14.04 LTS
+All files will be compiled on Ubuntu 20.04 LTS
 Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
 Your code should use the Betty style
 You are not allowed to use global variables
@@ -68,7 +68,7 @@ Custom printf function
 
 ### main.h: header file
 
-### Files and  Function
+#### Files and  Functions
 #### man_3_printf: _printf man page
 
 * printf.c:  main custom _printf function
