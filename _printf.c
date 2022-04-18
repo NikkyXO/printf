@@ -17,6 +17,7 @@ int printIdentifers(char nextchar, va_list arg)
 	identifierStruct functions[] = {
 		{"c", display_char},
 		{"s", display_string},
+		{"S", display_STRING},
 		{NULL, NULL}
 	};
 
