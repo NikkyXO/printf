@@ -18,6 +18,7 @@ int printIdentifers(char nextchar, va_list arg)
 		{"c", display_char},
 		{"s", display_string},
 		{"S", display_STRING},
+		{"d", display_int},
 		{NULL, NULL}
 	};
 
