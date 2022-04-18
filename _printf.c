@@ -19,6 +19,7 @@ int printIdentifers(char nextchar, va_list arg)
 		{"s", display_string},
 		{"S", display_STRING},
 		{"d", display_int},
+		{"i", display_int},
 		{NULL, NULL}
 	};
 
@@ -78,7 +79,7 @@ int _printf(const char *format, ...)
 		if (displayedIdentifier == 0)
 		{
 			_putchar('%');
-			displayedIdentifier++;
+			displayedChar++;
 		}
 	}
 	va_end(arg);
