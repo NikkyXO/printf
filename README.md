@@ -1,4 +1,4 @@
-# printf
+# _printf
 
 ## General information
 The _printf function is a custom implementation of the C programming function printf. It returns the number of characters printed and writes the output to stdout. It includes the conversion specifiers : c, s, %, d, x, X, u, o, rot13 and i.
@@ -77,3 +77,7 @@ Custom printf function
 * int _printf(const char *format, ...) | - prints output according to format
 #### Notes
 * Our program does not handle buffer handling, flag characters, field width, precision, or length modifiers.
+
+## Authors
+
+Olanike Ogundiran, Elisha Joshua
