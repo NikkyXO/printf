@@ -39,7 +39,7 @@ int display_unsignedIntToHex(unsigned int number, char _case)
  * Return: 0
  */
 
-int display_unsignedToBinary(va_list arg)
+/*int display_unsignedToBinary(va_list arg)
 {
 	unsigned int b = va_arg(arg, unsigned int);
 	unsigned int displayed;
@@ -48,4 +48,4 @@ int display_unsignedToBinary(va_list arg)
 	display_binary(b, &displayed);
 
 	return (displayed);
-}
+}*/
