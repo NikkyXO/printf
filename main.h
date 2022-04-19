@@ -11,6 +11,8 @@ int display_percent(void);
 int _printf(const char *format, ...);
 int display_unsignedIntToHex(unsigned int num, char _case);
 int display_int(va_list arg);
+int display_unsignedToBinary(va_list arg);
+void display_binary(unsigned int b, unsigned int *displayed);
 
 
 /**

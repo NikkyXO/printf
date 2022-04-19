@@ -32,3 +32,20 @@ int display_unsignedIntToHex(unsigned int number, char _case)
 	free(numhex);
 	return (nbrCharacters);
 }
+
+/**
+ * display_unsignedToBinary - displays an integer
+ * @arg: argument
+ * Return: 0
+ */
+
+int display_unsignedToBinary(va_list arg)
+{
+	unsigned int b = va_arg(arg, unsigned int);
+	unsigned int displayed;
+
+	display_binary(b, &displayed);
+	display_binary(b, &displayed);
+
+	return (displayed);
+}
