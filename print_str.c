@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * print_str - writes the string to stdout
@@ -24,17 +23,4 @@ int print_str(va_list arguments, char *buf, unsigned int ibuf)
 	for (i = 0; str[i]; i++)
 		ibuf = handl_buf(buf, str[i], ibuf);
 	return (i);
-}
-
-#include "main.h"
-
-/**
- * main - Entry point
- *
- * Return: Always 0
- */
-int main(void)
-{
-    _printf("%S\n", "Best\nSchool");
-    return (0);
 }
