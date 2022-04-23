@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * print_bnr - prints decimal in binary
- * @arguments: input string
+ * print_oct - prints decimal number in octal
+ * @arguments: input number
  * @buf: buffer pointer
  * @ibuf: index for buffer pointer
  * Return: number of chars printed.
  */
-int print_bnr(va_list arguments, char *buf, unsigned int ibuf)
+int print_oct(va_list arguments, char *buf, unsigned int ibuf)
 {
-	int int_input, count, i, first_one, isnegative;
-	char *binary;
+	int int_input, i, isnegative, count, first_digit;
+	char *octal, *binary;
 
 	int_input = va_arg(arguments, int);
 	isnegative = 0;
@@ -26,17 +26,19 @@ int print_bnr(va_list arguments, char *buf, unsigned int ibuf)
 	}
 	binary = malloc(sizeof(char) * (32 + 1));
 	binary = fill_binary_array(binary, int_input, isnegative, 32);
-	first_one = 0;
-	for (count = i = 0; binary[i]; i++)
+	octal = malloc(sizeof(char) * (11 + 1));
+	octal = fill_oct_array(binary, octal);
+	for (first_digit = i = count = 0; octal[i]; i++)
 	{
-		if (first_one == 0 && binary[i] == '1')
-			first_one = 1;
-		if (first_one == 1)
+		if (octal[i] != '0' && first_digit == 0)
+			first_digit = 1;
+		if (first_digit)
 		{
-			ibuf = handl_buf(buf, binary[i], ibuf);
+			ibuf = handl_buf(buf, octal[i], ibuf);
 			count++;
 		}
 	}
 	free(binary);
+	free(octal);
 	return (count);
 }
